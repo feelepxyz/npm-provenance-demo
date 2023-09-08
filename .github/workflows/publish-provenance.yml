@@ -24,7 +24,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN_PRODUCTION }}
         run: |
           npm install
-          npm publish --provenance --access public
+          npm publish --access public
       - uses: actions/upload-artifact@v3
         with:
           name: package.tgz
